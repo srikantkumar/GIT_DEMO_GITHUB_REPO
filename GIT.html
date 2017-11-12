@@ -1,0 +1,156 @@
+1)BASIC CONCEPTS -> WHY VERSION CONTROL SYSTEM 
+
+advantages:
+-Allows developers to work simultaneously
+-Does not allow overwriting each other’s changes. 
+-Maintains a history of every version.
+
+VCS is either  ditributed/centralzed 
+centralized ->located at one place 
+
+centarlized VCS - SVN/perforce/Accurev etc -> But the major drawback of CVCS is its single
+point of failure, i.e.,in case of  failure of the central server the entire team holds until server is back RUNNING.
+
+Distributed Version control system(DVCS) and GIT
+
+why GIT:
+
+-open source software
+-save time - lightning fast
+-work offline - everyone has complete repository at their local .Not dependent on central server all the time to work on a file.
+-undo mistakes 
+-unique branching capabilities ->cheap and easy to merge. 
+-fast and rapid
+-uses very less space - git gc saves around 50% of disk usage of the complete repo and should be used when we have very less disk space.
+-there is GITHUB for hosting your GIT repositories (1 GB space for free)
+
+
+2)Env Setup/Installations of GIT
+git --version
+
+GETTING STARTED:
+
+Create Operation:
+-create a new user 
+git config --global user.name "SRIKANT KUMAR"
+git config --global user.mail "SRIKUMAR@amdocs.com"
+git config --list
+
+
+3)You can use GIT for 2 common scenarios:
+-if you have existing code base on a local machine and want to track under Git ->git init 
+for untrack this project u can simply delete .git folder
+git status
+.gitignore
+
+ working , staging area  and .git directory
+
+tracking files:
+git add file name (git add. for every changes)
+git commit -m "Initial commit"
+both command combined: git commit -am "Initial commit"
+git log 
+
+->git reset for removing all files to working directory and as untracked files
+
+
+4)if you have existing project remotely that u want to start developing -> git clone <url> <where to clone>
+ cd /c/Users/srikumar/GIT_DEMO/Cloned-Repo
+git clone https://github.com/srikantkumar/GIT_DEMO_GITHUB_REPO.git .
+
+$ git remote -v
+origin  https://github.com/srikantkumar/GIT_DEMO_GITHUB_REPO.git (fetch)
+origin  https://github.com/srikantkumar/GIT_DEMO_GITHUB_REPO.git (push)
+
+$ git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/Nov_release
+  remotes/origin/master
+
+make some changes just like we did in local
+working directory is modified now
+commit to make it in staging area
+
+PUSH these changes remotely so that others can have access to these:
+first make a pull always inorder to make your repo up to date 
+git pull origin master ->it pulls any changes which have been made by other developers since we pulled  it last time .
+git push origin master 
+
+LIFE CYCLE of git operations:
+-clone a git repo as working copy ->git clone <clone-url> <clone dest>
+-modify by editing/adding files ->git add filename or git add . or git add *.html etc
+-if required update by refreshing other developers changes by -> git pull origin master
+origin is the name of repo and master is the branch.
+-review the changes before commit ->git commit -m "proper messages"
+-commit your changes and if everything seems fine , push your changes to the repo ->git push
+
+
+MANAGING branches:
+create a branch -> git branch  brach_name ->git push -u origin branch_name
+switch between branches ->git checkout branch_name
+switch and create with same command ->git checkout -b branch_name
+list branches -git branch (current branch) , git branch -a
+
+
+
+merge two branches -> git branch --merged ->all branched which have been merged
+git checkout master
+git pull origin master
+git branch --merged  -> *master (new branch do not popup there)
+git merge new_branch_name
+git push origin master
+
+if the branch is no longer required after merge:
+Delete a branch locally- git branch -d branch_name
+Delete a branch on remote -> git push origin  --delete branch_name
+
+be on destination branch (master) and run git merge new_branch_name 
+
+
+TAG creation:
+show tags: git tag
+create tags : git tag -a 11-Nov-Codebase  -m "Nov_11"
+view tags: git show Nov_11
+checkout to a particular tag: git  checkout Nov_11
+delete tags - git tag -d Nov_11 (local delete)
+              git push origin :Nov_11
+
+
+USEFUL COMMANDS:
+.git
+gitignore
+git diff
+
+
+
+ONLINE repositories
+-create a GITHUB repo
+push operation
+pull operation
+
+Advanced topics : 
+will be covered in next video
+.git folder contents
+git cherry-pick
+git gc
+git clean
+git history
+git rebase
+STASH operation
+MOVE operation
+rename operation
+DELETE operation
+FIX mistakes
+-HANDLING CONFLICTS
+
+Documentaion and HELP:
+https://www.git-scm.com/
+
+
+
+
+
+
+
+
