@@ -1,0 +1,56 @@
+Hi all,
+
+This is Srikant.
+Today i am going to discuss about version control system  specificlly GIT.
+most of u must be aware of what a VCS or source code  management tool does .
+it is used for tracking changes in computer files and coordinating work on those files among multiple people at the same time.
+
+
+VCS is either  ditributed/decentralzed 
+
+
+VCS->
+-It is a software that helps software developers to work together and maintain a complete history of their work. 
+-It is a system that records changes to a file or set of files over time so that you can recall specific versions later.
+-It allows you to revert selected files back to a previous state,
+-revert the entire project back to a previous state
+-compare changes over time
+-see who last modified something and when .
+
+
+
+advantages:
+Allows developers to work simultaneously
+Does not allow overwriting each other’s changes. 
+Maintains a history of every version.
+
+local vcs ->copy files into another directory (perhaps a time-stamped directory,(simple but error prone)
+centarlized VCS - SVN/perforce/Accurev etc -> But the major drawback of CVCS is its single
+point of failure, i.e., failure of the central server. Unfortunately, if the central
+server goes down for an hour, then during that hour, no one can collaborate at
+all. And even in a worst case, if the disk of the central server gets corrupted and
+proper backup has not been taken, then you will lose the entire history of the
+project.
+
+Distributed: GIT ,mercurial etc
+
+Advantages of distributed :
+
+DVCS clients not only check out the latest snapshot of the directory but they
+also fully mirror the repository. If the sever goes down, then the repository from
+any client can be copied back to the server to restore it. Every checkout is a full
+backup of the repository. Git does not rely on the central server and that is why
+you can perform many operations when you are offline.You can commit
+changes, create branches, view logs, and perform other operations when you
+are offline. You require network connection only to publish your changes and
+take the latest changes.
+
+GIT:
+
+->free and open source
+
+
+GIT BASIC commands:
+
+
+
